@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Wails Hello</title>
+  <script>
+    async function greet() {
+      const name = document.getElementById("name").value;
+      const result = await window.go.main.App.Greet(name);
+      document.getElementById("output").innerText = result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Wails Example</h1>
+
+  <input id="name" placeholder="Enter your name" />
+  <button onclick="greet()">Greet</button>
+
+  <p id="output"></p>
+</body>
+</html>
